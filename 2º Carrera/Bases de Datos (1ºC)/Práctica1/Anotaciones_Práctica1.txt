@@ -1,0 +1,49 @@
+Práctica 1
+--------------------------
+
+Atributos:
+-Piloto --> Rallie --> País --> Puntos
+
+RALLY:
+-CodRally (Clave primaria)
+-Nombre
+-Pais
+-Fecha
+
+TRAMO:
+-codRally (Clave primaria)(Clave ajena -> RALLY)
+-numeroTramo (Clave primaria)
+-totalKms
+-Dificultad (A,B[default] o C)(Obligatorio)
+
+COCHE:
+-codCoche (Clave primaria)
+-marca
+-modelo
+-cilindrada (2000-3000)
+
+PILOTO:
+-codPiloto (Clave primaria)
+-nombre(Nombre + apellidos) (Obligatorio) (No redundancia)
+-grupoS (A, B, AB, 0)
+-rh (+, -)
+-nombreCop (Obligatorio) (No redundancia)
+-coche (Clave ajena -> COCHE) (Obligatorio) (No redundancia)
+-puntos(Por temporada) (puntos=0[default]) (Siempre >= 0)
+
+PARTICIPA:
+-codRally (Clave primaria) (Clave ajena -> RALLY)
+-codPiloto (Clave primaria) (Clave ajena -> PILOTO)
+-penalización (Obligatorio) (valor = 0[default]) (Siempre >=0)
+-tiempoRally (Obligatorio) (valor = 0[default]) (Siempre >=0)
+
+CORRE:
+-codPiloto (Clave primaria) (Clave ajena -> PILOTO)
+-codRally (Clave primaria) (Clave ajena -> TRAMO)
+-numeroTramo (Clave primaria) (Clave ajena -> TRAMO)
+-tiempo (Obligatorio) (Siempre >=0)
+
+------------------------------------------------------------------------
+CÓDIGO:
+
+

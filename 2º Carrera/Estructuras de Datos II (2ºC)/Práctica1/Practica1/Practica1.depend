@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1514140574 source:c:\users\usuario\desktop\practica1\main.cpp
+	<iostream>
+
+1584029709 source:c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\practica1\main.cpp
+	<iostream>
+	"Multiconjunto.h"
+
+1584030203 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\practica1\include\multiconjunto.h
+	"Persona.h"
+
+1584196116 source:c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\practica1\src\multiconjunto.cpp
+	"Multiconjunto.h"
+
+1584197299 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\practica1\include\persona.h
+	<string>
+
+1584197737 source:c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\practica1\src\persona.cpp
+	"Persona.h"
+

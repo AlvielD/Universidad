@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"APP","l":"AFD"},{"p":"APP","l":"AFND"},{"l":"All Classes","u":"allclasses-index.html"},{"p":"APP","l":"FicheroCargado"},{"p":"APP","l":"main"},{"p":"GUI","l":"MainMenu"},{"p":"APP","l":"Proceso"}];updateSearchResults();

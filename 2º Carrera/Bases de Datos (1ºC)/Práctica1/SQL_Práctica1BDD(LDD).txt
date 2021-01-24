@@ -1,0 +1,93 @@
+CREATE TABLE RALLY(
+  codRally CHAR(4) PRIMARY KEY,
+  Nombre VARCHAR2(50),
+  Pais VARCHAR2(20),
+  Fecha DATE);
+  
+CREATE TABLE TRAMO(
+  codRally CHAR(4),
+  numeroTramo INT,
+  totalKms DEC(5,2),
+  Dificultad CHAR(1) NOT NULL,
+  CONSTRAINT tramoAjena
+    FOREIGN KEY (codRally) REFERENCES RALLY (codRally),
+  CONSTRAINT tramoClave
+    PRIMARY KEY (codRally, numeroTramo),
+  CONSTRAINT rangoDif
+    CHECK (Dificultad IN ('A','B','C')));
+    
+CREATE TABLE COCHE(
+  codCoche char(4) PRIMARY KEY,
+  marca VARCHAR2(10),
+  modelo VARCHAR2(20),
+  cilindrada INT,
+  CONSTRAINT rangoCilindr
+    CHECK (cilindrada >= 2000 AND cilindrada <= 3000));
+    
+CREATE TABLE PILOTO(
+  codPiloto CHAR(4) PRIMARY KEY,
+  nombreP VARCHAR2(50) UNIQUE NOT NULL,
+  grupoS CHAR(2),
+  rh CHAR(1),
+  nombreCop VARCHAR2(50) UNIQUE NOT NULL,
+  coche CHAR(4) UNIQUE NOT NULL,
+  puntos INT DEFAULT 0,
+  CONSTRAINT pilotoAjena
+    FOREIGN KEY (coche) REFERENCES COCHE (codCoche),
+  CONSTRAINT PilNoCop
+    CHECK (nombreP <> nombreCop),
+  CONSTRAINT puntosPosit
+    CHECK (puntos >= 0),
+  CONSTRAINT opGrupoS
+    CHECK (grupoS IN ('A','B','AB','0')),
+  CONSTRAINT ValorRh
+    CHECK (rh IN ('+','-')));
+    
+CREATE TABLE PARTICIPA(
+  codRally CHAR(4),
+  codPiloto CHAR(4),
+  penalizacion INT DEFAULT 0 NOT NULL ,
+  tiempoRally INT DEFAULT 0 NOT NULL,
+  CONSTRAINT clavePrimaria
+    PRIMARY KEY (codRally, codPiloto),
+  CONSTRAINT claveAjena
+    FOREIGN KEY (codRally) REFERENCES RALLY (codRally),
+    FOREIGN KEY (codPiloto) REFERENCES PILOTO (codPiloto),
+  CONSTRAINT penaliPosit
+    CHECK (penalizacion >= 0),
+  CONSTRAINT tiempoPosit
+    CHECK (tiempoRally >= 0));
+
+CREATE TABLE CORRE(
+  codPiloto CHAR(4),
+  codRally CHAR(4),
+  numeroTramo INT,
+  tiempo INT NOT NULL,
+  CONSTRAINT clavePrimariaCorre
+    PRIMARY KEY (codPiloto, codRally, numeroTramo),
+  CONSTRAINT ClaveAjenaCorre
+    FOREIGN KEY (codRally, numeroTramo) REFERENCES TRAMO (codRally, numeroTramo),
+    FOREIGN KEY (codPiloto) REFERENCES PILOTO (codPiloto),
+  CONSTRAINT TempPositiv
+    CHECK (tiempo >=0));
+	
+--ALTER TABLE--
+ALTER TABLE RALLY
+  ADD CONSTRAINT R_nombreUnico UNIQUE(nombre);
+  
+ALTER TABLE TRAMO
+  ADD CONSTRAINT Totalmayor CHECK (totalKms>=20);
+  
+ALTER TABLE RALLY
+  ADD CONSTRAINT fechaAnterior CHECK(Fecha > TO_DATE('01/01/2009' , 'dd/mm/yyyy')
+							   AND Fecha < TO_DATE('31/12/2009' , 'dd/mm/yyyy'));
+						
+ALTER TABLE TRAMO 
+  ADD CONSTRAINT totalKmsunico UNIQUE(codRally, totalKms);
+  
+--Primero borramos la Constraint anterior y luego creamos una nueva
+ALTER TABLE TRAMO 
+	DROP CONSTRAINT tramoAjena;
+  
+ALTER TABLE TRAMO
+	ADD CONSTRAINT tramoAjena FOREIGN KEY(codRally) REFERENCES RALLY(codRally) ON DELETE CASCADE;

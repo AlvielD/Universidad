@@ -1,0 +1,79 @@
+# depslib dependency file v1.0
+1556047764 source:c:\users\aeste\desktop\práctica01v2.0\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstring>
+	<conio.h>
+	"Productos.h"
+	"Ventas.h"
+
+1555672239 c:\users\aeste\desktop\práctica01v2.0\productos.h
+	<fstream>
+	"Ventas.h"
+
+1555613593 c:\users\aeste\desktop\práctica01v2.0\ventas.h
+	<iostream>
+	<fstream>
+	<string.h>
+
+1556048586 source:c:\users\aeste\desktop\práctica01v2.0\productos.cpp
+	<conio.h>
+	"Productos.h"
+
+1556048517 source:c:\users\aeste\desktop\práctica01v2.0\ventas.cpp
+	"Productos.h"
+	"Ventas.h"
+
+1556265360 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica1\práctica01v2.0\productos.cpp
+	<conio.h>
+	"Productos.h"
+
+1555672240 c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica1\práctica01v2.0\productos.h
+	<fstream>
+	"Ventas.h"
+
+1555613594 c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica1\práctica01v2.0\ventas.h
+	<iostream>
+	<fstream>
+	<string.h>
+
+1556265234 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica1\práctica01v2.0\ventas.cpp
+	"Productos.h"
+	"Ventas.h"
+
+1556117940 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica1\práctica01v2.0\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstring>
+	<conio.h>
+	"Productos.h"
+	"Ventas.h"
+
+1556117940 source:f:\práctica1\práctica01v2.0\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstring>
+	<conio.h>
+	"Productos.h"
+	"Ventas.h"
+
+1555672240 f:\práctica1\práctica01v2.0\productos.h
+	<fstream>
+	"Ventas.h"
+
+1555613594 f:\práctica1\práctica01v2.0\ventas.h
+	<iostream>
+	<fstream>
+	<string.h>
+
+1556222276 source:f:\práctica1\práctica01v2.0\productos.cpp
+	<conio.h>
+	"Productos.h"
+
+1556222276 source:f:\práctica1\práctica01v2.0\ventas.cpp
+	"Productos.h"
+	"Ventas.h"
+

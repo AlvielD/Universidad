@@ -1,0 +1,15 @@
+ESTADOS: a b c d
+INICIAL: a
+FINALES: a c
+TRANSICIONES:
+ a 1 b c
+ a 2 d
+ b 1 a b c
+ b 2 c
+ c 1 a
+ c 3 c
+ d 2 a c
+TRANSICIONES LAMBDA:
+ a b c
+ b d
+FIN

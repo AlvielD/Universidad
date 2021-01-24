@@ -1,0 +1,15 @@
+//PROGRAMA PARA EL RELOJ
+mount E C:\Ensamblador
+E:
+CLS
+tasm /zi /l practica.asm
+tlink /t practica.obj
+practica.com
+
+//PROGRAMA PARA LA PRÁCTICA01
+mount E C:\Ensamblador
+E:
+CLS
+tasm /zi /l P1.ASM
+tlink /v P1.OBJ
+P1

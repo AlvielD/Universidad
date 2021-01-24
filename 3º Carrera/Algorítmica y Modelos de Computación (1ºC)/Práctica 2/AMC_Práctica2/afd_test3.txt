@@ -1,0 +1,19 @@
+Acepta la cadena "01" o cualquier cadena que contenga al menos un '1' 
+seguida de un '0' (Se inlcuye un trap state --> M)
+ESTADOS: A B C D E M
+INICIAL: A
+FINALES: D E
+TRANSICIONES:
+ A 0 C
+ A 1 B
+ B 0 D
+ B 1 B
+ C 0 M
+ C 1 E
+ D 0 M
+ D 1 M
+ E 0 M
+ E 1 M
+ M 0 M
+ M 1 M
+FIN

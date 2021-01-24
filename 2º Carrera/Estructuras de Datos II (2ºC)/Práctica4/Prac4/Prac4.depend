@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1590663079 source:c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica4\prac4\main.cpp
+	<iostream>
+	<cstdlib>
+	"grafo.h"
+	"conjunto.h"
+	<queue>
+	<sstream>
+	<map>
+
+1589713994 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica4\prac4\include\grafo.h
+	"vertice.h"
+	"arista.h"
+	"conjunto.h"
+	"excep_grafo.h"
+	<map>
+
+1367229138 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica4\prac4\include\vertice.h
+
+1367495998 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica4\prac4\include\arista.h
+	"vertice.h"
+
+1367317150 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica4\prac4\include\conjunto.h
+	"excep_conjunto.h"
+
+1367310762 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica4\prac4\include\excep_conjunto.h
+	"excepcion.h"
+
+1331037254 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica4\prac4\include\excepcion.h
+	<string>
+	<stdexcept>
+
+1367489298 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica4\prac4\include\excep_grafo.h
+	"excepcion.h"
+

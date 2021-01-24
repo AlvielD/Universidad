@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1545048452 source:c:\users\aeste\desktop\Álvaro\universidad\fp\prácticas\guión4\ejercicio 2\main.cpp
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+
+1545052052 source:e:\universidad\1º carrera\1º cuatrimestre\fp\prácticas\guión4\ejercicio 2(tic-tac-toe)\main.cpp
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+

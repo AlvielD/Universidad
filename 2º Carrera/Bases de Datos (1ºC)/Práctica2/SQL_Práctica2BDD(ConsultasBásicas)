@@ -1,0 +1,25 @@
+---------------------------------------------------------------------------------------------------
+									--Consultas Básicas--
+---------------------------------------------------------------------------------------------------
+
+--WRC-1
+SELECT *
+FROM WRC.RALLY
+WHERE Fecha < TO_DATE('01/10/2009' , 'dd/mm/yyyy')
+AND Pais LIKE '_______%';
+
+--WRC-2
+SELECT NombreP, NombreCop
+FROM WRC.PILOTO
+WHERE NombreP NOT LIKE 'M%'
+ORDER BY NombreP;
+
+--WRC-3
+SELECT NombreP, grupoS
+FROM WRC.PILOTO
+WHERE NombreP LIKE 'M%' AND grupoS LIKE '__';
+
+--WRC-4
+SELECT Nombre, Fecha
+FROM WRC.RALLY
+WHERE EXTRACT (MONTH FROM Fecha) = '08' AND EXTRACT(DAY FROM Fecha) > '15' AND EXTRACT(DAY FROM Fecha) < '31';

@@ -1,0 +1,133 @@
+# depslib dependency file v1.0
+1572515218 source:c:\users\aeste\desktop\práctica01\main.cpp
+	<cstdlib>
+	<iostream>
+	"Fecha.h"
+
+1572515976 c:\users\aeste\desktop\práctica01\include\fecha.h
+
+1572514660 source:c:\users\aeste\desktop\práctica01\src\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1573494218 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(revisar)\main.cpp
+	<cstdlib>
+	<iostream>
+	"Fecha.h"
+	"Cliente.h"
+
+1573490835 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(revisar)\include\fecha.h
+	<iostream>
+
+1573491611 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(revisar)\src\fecha.cpp
+	"Fecha.h"
+	<iostream>
+	<string.h>
+
+1573675772 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(revisar)\include\cliente.h
+	"Fecha.h"
+
+1573675322 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(revisar)\src\cliente.cpp
+	"Cliente.h"
+	<string.h>
+
+1573725651 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(2de3)\src\cliente.cpp
+	"Cliente.h"
+	<string.h>
+
+1573675939 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(2de3)\include\cliente.h
+	"Fecha.h"
+
+1573490835 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(2de3)\include\fecha.h
+	<iostream>
+
+1573745449 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(2de3)\src\fecha.cpp
+	"Fecha.h"
+	<iostream>
+	<string.h>
+
+1573921375 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(2de3)\main.cpp
+	<cstdlib>
+	<iostream>
+	<iomanip>
+	"Fecha.h"
+	"Contrato.h"
+	"ContratoTP.h"
+	"ContratoMovil.h"
+
+1573919430 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(2de3)\include\contrato.h
+	"Fecha.h"
+	<string.h>
+
+1573919621 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(2de3)\src\contrato.cpp
+	"Contrato.h"
+
+1573987660 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(2de3)\src\contratomovil.cpp
+	"ContratoMovil.h"
+
+1573987438 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(2de3)\include\contratomovil.h
+	<Contrato.h>
+
+1573986760 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(2de3)\src\contratotp.cpp
+	"ContratoTP.h"
+
+1573919887 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(2de3)\include\contratotp.h
+	<Contrato.h>
+
+1574933879 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(3de3)\src\cliente.cpp
+	"Cliente.h"
+	<string.h>
+
+1573675939 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(3de3)\include\cliente.h
+	"Fecha.h"
+
+1574350921 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(3de3)\include\fecha.h
+	<iostream>
+
+1574935291 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(3de3)\src\contrato.cpp
+	"Contrato.h"
+
+1574935387 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(3de3)\include\contrato.h
+	"Fecha.h"
+	<string.h>
+
+1574933880 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(3de3)\src\contratomovil.cpp
+	"ContratoMovil.h"
+
+1574935387 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(3de3)\include\contratomovil.h
+	<Contrato.h>
+
+1574933879 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(3de3)\src\contratotp.cpp
+	"ContratoTP.h"
+
+1574935387 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(3de3)\include\contratotp.h
+	<Contrato.h>
+
+1574351229 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(3de3)\src\fecha.cpp
+	"Fecha.h"
+	<iostream>
+	<string.h>
+
+1574933879 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(3de3)\main.cpp
+	<cstdlib>
+	<iostream>
+	<iomanip>
+	"Fecha.h"
+	"Cliente.h"
+	"Contrato.h"
+	"ContratoTP.h"
+	"ContratoMovil.h"
+	"Empresa.h"
+
+1574936340 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(3de3)\src\empresa.cpp
+	"Empresa.h"
+
+1574875574 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(3de3)\include\empresa.h
+	"Fecha.h"
+	"Cliente.h"
+	"Contrato.h"
+	"ContratoTP.h"
+	"ContratoMovil.h"
+	<typeinfo>
+	<stdlib.h>
+

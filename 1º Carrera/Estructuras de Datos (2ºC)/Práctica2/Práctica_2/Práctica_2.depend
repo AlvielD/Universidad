@@ -1,0 +1,164 @@
+# depslib dependency file v1.0
+1556879200 source:c:\users\usuario\desktop\práctica_2\cola.cpp
+
+1556879219 source:c:\users\usuario\desktop\práctica_2\lista.cpp
+
+1556879244 source:c:\users\usuario\desktop\práctica_2\peluqueria.cpp
+
+1556883638 source:c:\users\usuario\desktop\práctica_2\main.cpp
+	<iostream>
+	<locale.h>
+	<stdlib.h>
+	<windows.h>
+
+1557485532 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\práctica_2\cola.cpp
+	"Cola.h"
+	<iostream>
+
+1557484798 c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\práctica_2\cola.h
+	<iostream>
+
+1557486286 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\práctica_2\lista.cpp
+	"Lista.h"
+
+1557484798 c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\práctica_2\lista.h
+	"Cola.h"
+	<iostream>
+
+1557846350 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\práctica_2\peluqueria.cpp
+	"Peluqueria.h"
+	<fstream>
+	<iostream>
+	<string.h>
+
+1558037070 c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\práctica_2\peluqueria.h
+	"Lista.h"
+	<fstream>
+
+1557484798 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\práctica_2\cola.h
+	<iostream>
+
+1557484798 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\práctica_2\lista.h
+	"Cola.h"
+	<iostream>
+
+1557935995 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\práctica_2\main.cpp
+	<iostream>
+	<locale.h>
+	<stdlib.h>
+	<windows.h>
+	"Peluqueria.h"
+
+1557681424 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\práctica_2\peluqueria.h
+	"Lista.h"
+	<fstream>
+
+1558183272 source:h:\práctica_2\cola.cpp
+	"Cola.h"
+	<iostream>
+
+1557484798 h:\práctica_2\cola.h
+	<iostream>
+
+1557484798 source:h:\práctica_2\cola.h
+	<iostream>
+
+1557486286 source:h:\práctica_2\lista.cpp
+	"Lista.h"
+
+1557484798 h:\práctica_2\lista.h
+	"Cola.h"
+	<iostream>
+
+1557484798 source:h:\práctica_2\lista.h
+	"Cola.h"
+	<iostream>
+
+1558693746 source:h:\práctica_2\main.cpp
+	<iostream>
+	<locale.h>
+	<stdlib.h>
+	<windows.h>
+	"Peluqueria.h"
+
+1558037072 h:\práctica_2\peluqueria.h
+	"Lista.h"
+	<fstream>
+
+1558037072 source:h:\práctica_2\peluqueria.h
+	"Lista.h"
+	<fstream>
+
+1558693684 source:h:\práctica_2\peluqueria.cpp
+	"Peluqueria.h"
+	<fstream>
+	<iostream>
+	<string.h>
+	<stdlib.h>
+
+1558972936 source:d:\práctica_2\cola.cpp
+	"Cola.h"
+	<iostream>
+
+1558969520 d:\práctica_2\cola.h
+	<iostream>
+
+1558972936 source:d:\práctica_2\lista.cpp
+	"Lista.h"
+	<string.h>
+
+1558965832 d:\práctica_2\lista.h
+	"Cola.h"
+	<iostream>
+
+1558969520 source:d:\práctica_2\main.cpp
+	<iostream>
+	<locale.h>
+	<stdlib.h>
+	<windows.h>
+	"Peluqueria.h"
+
+1558037072 d:\práctica_2\peluqueria.h
+	"Lista.h"
+	<fstream>
+
+1558973760 source:d:\práctica_2\peluqueria.cpp
+	"Peluqueria.h"
+	<fstream>
+	<iostream>
+	<string.h>
+	<stdlib.h>
+
+1558972936 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\cola.cpp
+	"Cola.h"
+	<iostream>
+
+1558969520 c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\cola.h
+	<iostream>
+
+1559293907 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\lista.cpp
+	"Lista.h"
+	<string.h>
+
+1558965832 c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\lista.h
+	"Cola.h"
+	<iostream>
+
+1559154366 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\main.cpp
+	<iostream>
+	<locale.h>
+	<stdlib.h>
+	<windows.h>
+	"Peluqueria.h"
+
+1559232851 c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\peluqueria.h
+	"Lista.h"
+	<fstream>
+
+1559293866 source:c:\users\aeste\desktop\Álvaro\universidad\2º cuatrimestre\ed\prácticas\práctica2\práctica_2\peluqueria.cpp
+	"Peluqueria.h"
+	<fstream>
+	<iostream>
+	<string.h>
+	<stdlib.h>
+

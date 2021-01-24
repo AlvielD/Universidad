@@ -1,0 +1,10 @@
+mount E C:\Ensamblador
+E:
+CLS
+tasm /zi /l RelojP1.asm
+tlink /t RelojP1.obj
+RelojP1.com
+
+tasm /zi /l main.asm
+tlink /v main.obj
+main

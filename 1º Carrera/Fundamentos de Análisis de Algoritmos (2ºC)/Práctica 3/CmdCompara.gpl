@@ -1,0 +1,12 @@
+#ESTE ES UN SCRIPT DE GNUPLOT PARA LA COMPARACIÓN DE DOS METODOS DE ORDENACION
+set title "Comparacion de los metodos BinariaR & TernariaR"
+set key top left vertical inside
+set grid
+set xlabel "Talla (n)"
+set ylabel "Tiempo (ms)"
+
+plot "BinariaRMedio.dat" using 1:2 with lines title "BinariaR", "TernariaRMedio.dat" using 1:2 with lines title "TernariaR"
+set terminal pdf
+set output "CMPBinariaRTernariaR.pdf"
+replot
+pause -1 "Pulsa Enter para continuar..."

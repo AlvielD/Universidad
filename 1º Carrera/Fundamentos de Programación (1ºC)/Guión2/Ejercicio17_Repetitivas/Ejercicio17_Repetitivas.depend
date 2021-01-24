@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1543338253 source:c:\users\usuario\desktop\Álvaro\universidad\programación\ejercicio17_repetitivas\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+

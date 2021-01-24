@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1572515218 source:c:\users\aeste\desktop\práctica01\main.cpp
+	<cstdlib>
+	<iostream>
+	"Fecha.h"
+
+1572515976 c:\users\aeste\desktop\práctica01\include\fecha.h
+
+1572514660 source:c:\users\aeste\desktop\práctica01\src\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1573494218 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(revisar)\main.cpp
+	<cstdlib>
+	<iostream>
+	"Fecha.h"
+	"Cliente.h"
+
+1573490835 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(revisar)\include\fecha.h
+	<iostream>
+
+1573491611 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(revisar)\src\fecha.cpp
+	"Fecha.h"
+	<iostream>
+	<string.h>
+
+1573675772 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(revisar)\include\cliente.h
+	"Fecha.h"
+
+1573675322 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(revisar)\src\cliente.cpp
+	"Cliente.h"
+	<string.h>
+
+1573675939 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(1de3 eficiencia y robusted)\main.cpp
+	<cstdlib>
+	<iostream>
+	"Fecha.h"
+	"Cliente.h"
+
+1574934557 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(1de3 eficiencia y robusted)\include\fecha.h
+	<iostream>
+
+1573675939 c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(1de3 eficiencia y robusted)\include\cliente.h
+	"Fecha.h"
+
+1573725833 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(1de3 eficiencia y robusted)\src\cliente.cpp
+	"Cliente.h"
+	<string.h>
+
+1573723506 source:c:\users\aeste\desktop\Álvaro\universidad\1º cuatrimestre\metodología de la programación\prácticas\práctica01(1de3 eficiencia y robusted)\src\fecha.cpp
+	"Fecha.h"
+	<iostream>
+	<string.h>
+

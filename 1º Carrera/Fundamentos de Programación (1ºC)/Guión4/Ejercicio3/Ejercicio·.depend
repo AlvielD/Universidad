@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1546006772 source:f:\ejercicio3\main.cpp
+	<iostream>
+	<conio.h>
+
+1547737983 source:c:\users\aeste\desktop\Álvaro\universidad\fp\prácticas\guión4\ejercicio3\main.cpp
+	<iostream>
+	<conio.h>
+	<cstdlib>
+	<ctype.h>
+

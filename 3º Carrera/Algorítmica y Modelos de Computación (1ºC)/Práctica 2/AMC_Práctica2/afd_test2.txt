@@ -1,0 +1,16 @@
+Acepta todas las cadenas que contengan "aabb" en ellas
+ESTADOS: A B C D E
+INICIAL: A
+FINALES: E
+TRANSICIONES:
+ A a B
+ A b B
+ B a C
+ B b A
+ C a C
+ C b D
+ D a B
+ D b E
+ E a E
+ E b E
+FIN

@@ -1,0 +1,121 @@
+--EI-21
+SELECT P.nombre, A.nombre
+FROM EI.PROFESOR P LEFT OUTER JOIN EI.ASIGNATURA A ON P.nPr = A.prof;
+
+--EI-22
+SELECT COUNT (DISTINCT despacho)
+FROM EI.PROFESOR;
+
+--EI-23
+SELECT COUNT (*), MAX (sep) AS MAXIMA
+	MIN (sep) AS MINIMA, AVG (sep) AS MEDIA
+FROM EI.ASIGNATURA A INNER JOIN EI.MATRICULA M USING (idAsig)
+WHERE A.nombre = 'Bases de Datos I' AND M.año=2002;
+
+--EI-24
+SELECT A.nombre
+FROM EI.ASIGNATURA A
+WHERE (SELECT COUNT (*)
+	   FROM EI.RECOMENDACIONES R
+	   WHERE A.idAsig = R.idAsig1) >=2;
+	   
+--EI-25
+SELECT P1.nombre
+FROM EI.PROFESOR P1
+WHERE (SELECT COUNT(*)
+	   FROM EI.PROFESOR P2
+	   WHERE P1.ant < P2.ant) >=5;
+	   
+--EI-26
+SELECT A.nombre, M.año, COUNT(feb_jun) AS PRESENTADOS, AVG(feb_jun) AS MEDIA
+FROM EI.ASIGNATURA A INNER JOIN EI.MATRICULA M USING (idAsig)
+GROUP BY A.nombre, M.año;
+
+--EI-27
+SELECT A.nombre, ASIG.nombre, COUNT(*)
+FROM (EI.ALUMNO A INNER JOIN EI.MATRICULA M ON A.nAl = M.alum
+	  INNER JOIN EI.ASIGNATURA ASIG USING (idAsig))
+GROUP BY A.nombre, ASIG.nombre
+HAVING COUNT(*) >=3;
+
+--EI-28
+SELECT A.nombre
+FROM EI.ALUMNO A INNER JOIN EI.MATRICULA M ON A.nAl = M.alum
+WHERE año=2002
+GROUP BY A.nombre
+HAVING AVG(feb_jun) > 5;
+
+--EI-29
+SELECT A.nombre, COUNT(*)
+FROM EI.ASIGNATURA A INNER JOIN EI.MATRICULA M USING (idAsig)
+WHERE año=2002
+GROUP BY A.nombre
+HAVING COUNT(*) >= ALL (SELECT COUNT(*)
+						FROM EI.MATRICULA
+						WHERE año=2002
+						GROUP BY idAsig);
+						
+--EI-30
+SELECT A.nombre, COUNT(*)
+FROM EI.ASIGNATURA A INNER JOIN EI.MATRICULA M USING (idAsig)
+WHERE M.año = 2002 AND M.feb_jun < 5 AND
+	idAsig IN (SELECT M.idAsig
+			   FROM EI.MATRICULA M
+			   WHERE M.año = 2002
+			   GROUP BY M.idAsig
+			   HAVING COUNT (*) > 50)
+GROUP BY A.nombre;
+
+---------------------------------------------------------------------------------------------------
+								--SESIÓN 5: OUTER JOINS & GROUP BY--
+---------------------------------------------------------------------------------------------------
+
+--WRC-22
+SELECT nombre, COUNT(*) AS TRAMOS
+FROM WRC.RALLY R INNER JOIN WRC.TRAMO T ON R.codRally=T.codRally
+GROUP BY nombre;
+
+--WRC-23
+SELECT nombre, numeroTramo, MAX(tiempo) AS t_maximo, MIN(tiempo) AS t_minimo
+FROM (WRC.RALLY INNER JOIN WRC.TRAMO USING (codRally)) INNER JOIN WRC.CORRE USING(codRally, numeroTramo)
+GROUP BY nombre, numeroTramo
+ORDER BY nombre, t_minimo;
+
+--WRC-24
+SELECT nombre, nombreP, tiempoRally
+FROM (WRC.RALLY INNER JOIN WRC.PARTICIPA USING(codRally)
+	  INNER JOIN WRC.PILOTO USING (codPiloto))
+GROUP BY nombre, nombreP, tiempoRally
+ORDER BY nombre, nombreP, tiempoRally;
+
+--WRC-25
+SELECT nombreP, COUNT(*) AS n_tramos, SUM(TotalKms) AS Total_Kms
+FROM WRC.PILOTO P INNER JOIN WRC.CORRE C ON P.codPiloto=C.codPiloto
+	 INNER JOIN WRC.TRAMO T ON C.codRally=T.codRally AND C.numeroTramo=T.numeroTramo
+	 INNER JOIN WRC.RALLY R ON T.codRally=R.codRally
+WHERE nombre='Rally de Montecarlo'
+GROUP BY nombreP
+ORDER BY total_Kms desc;
+
+--WRC-26
+SELECT codRally, AVG(totalKms)
+FROM WRC.RALLY INNER JOIN WRC.TRAMO USING (codRally)
+GROUP BY codRally
+HAVING(SUM(totalKms)>100);
+
+--WRC-27
+SELECT nombre, COUNT(numeroTramo)
+FROM WRC.RALLY INNER JOIN WRC.TRAMO USING (codRally)
+GROUP BY nombre
+HAVING(COUNT(numeroTramo) > 2);
+
+--WRC-28 NO VAAAA
+SELECT nombreP, grupoS, rh, puntos
+FROM (WRC.PILOTO INNER JOIN WRC.PARTICIPA USING(codPiloto))
+      INNER JOIN WRC.TRAMO USING (codRally)
+WHERE dificultad='A'
+GROUP BY nombreP, grupoS, rh, puntos
+HAVING COUNT(numeroTramo) >= ALL (SELECT COUNT(numeroTramo)
+                                FROM (WRC.PILOTO INNER JOIN WRC.PARTICIPA USING(codPiloto))
+                                      INNER JOIN WRC.TRAMO USING (codRally)
+                                WHERE dificultad='A');

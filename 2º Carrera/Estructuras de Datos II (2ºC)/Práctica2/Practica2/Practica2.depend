@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1588063833 source:c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica2\practica2\practica2.cpp
+	<iostream>
+	<cstdlib>
+	<queue>
+	<string>
+	"arbin.h"
+	"abb.h"
+	"excepcion.h"
+	"excep_ejercicio6.h"
+
+1585254217 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica2\practica2\include\arbin.h
+	"nodoB.h"
+	"excep_arbin.h"
+
+1144357856 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica2\practica2\include\nodob.h
+	<stdlib.h>
+
+1331895784 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica2\practica2\include\excep_arbin.h
+	"excepcion.h"
+
+1331040854 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica2\practica2\include\excepcion.h
+	<string>
+	<stdexcept>
+
+1331892404 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica2\practica2\include\abb.h
+	"nodoB.h"
+	"excep_abb.h"
+	"arbin.h"
+
+1331895784 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica2\practica2\include\excep_abb.h
+	"excepcion.h"
+
+1585053750 source:c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica2\practica2\src\ejemplo.cpp
+	"Ejemplo.h"
+
+1585053749 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica2\practica2\include\ejemplo.h
+
+1585055006 source:c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica2\practica2\main.cpp
+
+1586085461 c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica2\practica2\include\excep_ejercicio6.h
+	"excepcion.h"
+
+1586085063 source:c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica2\practica2\src\excep_ejercicio6.cpp
+	"excep_ejercicio6.h"
+
+1588064016 source:c:\users\aeste\desktop\universidad\2º cuatrimestre\estructura de datos ii\prácticas\práctica2\practica2\ejemplo.cpp
+	<iostream>
+	<cstdlib>
+	"arbin.h"
+
