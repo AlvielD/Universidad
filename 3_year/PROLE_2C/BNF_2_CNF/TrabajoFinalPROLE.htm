@@ -1,0 +1,462 @@
+<html><head>
+<meta http-equiv="Content-Language" content="es">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Procesadores de Lenguaje</title>
+<style type="text/css">
+.auto-style1 {
+	font-size: x-large;
+	color: #000080;
+}
+.auto-style2 {
+	text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<table width="740" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="740" valign="top">
+   <p><img src="TrabajoFinalPROLE_files/head.jpg" alt="Escuela Técnica Superior de Ingeniería" width="740" height="100" border="0"></p>
+   </td>
+  </tr>
+  
+  <tr>
+  <td width="740" valign="top">
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><font size="6" color="#000080">Procesadores de Lenguajes</font></p>
+
+<p align="center"><font size="5" color="#000080">Curso 2020/2021</font></p>
+
+<p align="center">&nbsp;</p>
+<table style="border-color: #000000; border-collapse: collapse" id="AutoNumber1" width="100%" cellspacing="0" cellpadding="0" border="1">
+  <tbody><tr>
+    <td width="100%" bgcolor="#9999FF" align="center">
+    <font size="6" color="#000080">Trabajo</font></td>
+  </tr>
+  <tr>
+    <td class="auto-style1" width="100%" bgcolor="#9999FF" align="center">
+        <font size="6">Forma Normal de Chomsky</font></td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+<table style="border-color: #000000; border-collapse: collapse" id="AutoNumber2" width="100%" cellspacing="0" cellpadding="0" border="1">
+  <tbody><tr>
+    <td width="100%" bgcolor="#000080">
+    <p align="center"><span style="background-color: #000080">
+    <font color="#FFFFFF"><span style="font-weight: 700">OBJETIVOS</span></font></span></p></td>
+  </tr>
+  <tr>
+    <td width="100%"><p>&nbsp;</p>
+    <ul>
+      <li>
+      <p style="margin-left: 10; margin-right: 20; margin-bottom: 15; text-align: justify;" align="left">
+          El objetivo de este trabajo es desarrollar una aplicación que tome 
+		  como entrada la descripción de una gramática en notación BNF y genere 
+		  una nueva gramática equivalente en Forma Normal de Chomsky.</p>
+      </li>
+    </ul>
+    </td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<table style="border-color: #000000; border-collapse: collapse" id="AutoNumber2" width="100%" cellspacing="0" cellpadding="0" border="1">
+  <tbody><tr>
+    <td width="100%" bgcolor="#000080">
+    <p align="center"><span style="background-color: #000080">
+    <font color="#FFFFFF"><span style="font-weight: 700">LA FORMA NORMAL DE CHOMSKY</span></font></span></p></td>
+  </tr>
+  <tr>
+    <td width="100%"><p>&nbsp;</p>
+      <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+            Se dice que una gramática libre de contexto está en Forma Normal de Chomsky si todas sus reglas son 
+            de la forma A &#8594; <strong>a</strong> (parte derecha con un único símbolo terminal) o A &#8594; B C (parte derecha con dos 
+            símbolos no terminales). Si el lenguaje incluye la cadena vacía, entonces se incluye la regla S &#8594;
+			&#955; (siendo S el símbolo inicial).
+      </p>
+	<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+            Toda gramática libre de contexto se puede transformar en una 
+			gramática equivalente en Forma Normal de Chomsky mediante el 
+			siguiente algoritmo:</p>
+	<ul>
+		<li>
+		<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+		Eliminar las reglas A &#8594; &#955; y para cada regla en la que aparezca el símbolo A se generan dos reglas, una con A y otra sin A.
+		</p>
+		</li>
+	</ul>
+	<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; " class="auto-style2">
+	<img alt="Paso 1" src="TrabajoFinalPROLE_files/paso1.png" width="493" height="86"></p>
+	<ul>
+		<li>
+		<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+		Para cada símbolo terminal <strong>a</strong> que aparezca en alguna 
+		regla acompañado de más símbolos se crea un nuevo símbolo no terminal A, 
+		se añade la regla A &#8594; <strong>a</strong> y se sustituyen las apariciones 
+		del terminal <strong>a</strong> por el no terminal A.</p>
+		</li>
+	</ul>
+	<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; " class="auto-style2">
+	<img alt="Paso 2" src="TrabajoFinalPROLE_files/paso2.png" width="407" height="135"></p>
+	<ul>
+		<li>
+		<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+		Sustituir las reglas de tipo A &#8594; B (es decir, las reglas con un único 
+		símbolo no terminal en la parte derecha). Para ello, por cada regla B &#8594; <strong>a</strong> 
+		se crea una nueva regla A &#8594; <strong>a</strong> y por cada regla&nbsp; B 
+		&#8594; C D E&nbsp; se crea una regla A &#8594; C D E.</p>
+		</li>
+	</ul>
+	<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; " class="auto-style2">
+	<img alt="Paso 3" src="TrabajoFinalPROLE_files/paso3.png" width="493" height="143"></p>
+	<ul>
+		<li>
+		<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+		Por cada regla con más de dos símbolos no terminales a la derecha, A &#8594; B 
+		C D ..., se crean nuevos símbolos terminales N1, N2, ... y&nbsp; se 
+		sustituye la regla por A &#8594; B N1,&nbsp; N1 &#8594; C N2, N2 &#8594; D...</p>
+		</li>
+	</ul>
+    <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; " class="auto-style2">
+	<img alt="Paso 4" src="TrabajoFinalPROLE_files/paso4.png" width="493" height="93"></p>
+	<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+	Ejemplo:</p>
+	<ul>
+		<li>
+		<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+		Gramática original</p>
+		</li>
+	</ul>
+	<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; " class="auto-style2">
+	<img alt="Ejemplo. Gramática original" src="TrabajoFinalPROLE_files/ejemplo1.png" width="370"></p>
+	<ul>
+		<li>
+		<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+		Primer paso: eliminar reglas 
+		lambda (solo afecta al símbolo Args)</p>
+		</li>
+	</ul>
+	<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; " class="auto-style2">
+	<img alt="Ejemplo. Primer paso" src="TrabajoFinalPROLE_files/ejemplo2.png" width="370"></p>
+	<ul>
+		<li>
+		<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+		Segundo paso: crear reglas para los símbolos terminales (crea 8 
+		símbolos y reglas nuevas)</p>
+		</li>
+	</ul>
+	<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; " class="auto-style2">
+	<img alt="Ejemplo. Segundo paso" src="TrabajoFinalPROLE_files/ejemplo3.png" width="583"></p>
+	<ul>
+		<li>
+		<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+		Tercer paso: 
+		expandir las reglas con un único símbolo</p>
+		</li>
+	</ul>
+	<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; " class="auto-style2">
+	<img alt="Ejemplo. Tercer paso" src="TrabajoFinalPROLE_files/ejemplo4.png" width="708"></p>
+	<ul>
+		<li>
+		<p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+		Cuarto paso: trocear las reglas con más de dos símbolos</p>
+		</li>
+	</ul>
+    <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; " class="auto-style2">
+	<img alt="Ejemplo. Cuarto paso" src="TrabajoFinalPROLE_files/ejemplo5.png" width="708"></p>
+    </td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+<table style="border-color: #000000; border-collapse: collapse" id="AutoNumber3" width="100%" cellspacing="0" cellpadding="0" border="1">
+  <tbody><tr>
+    <td width="100%" bgcolor="#000080">
+    <p align="center"><span style="background-color: #000080">
+    <font color="#FFFFFF"><span style="font-weight: 700">ESPECIFICACIÓN LÉXICA</span></font></span></p></td>
+  </tr>
+  <tr>
+    <td width="100%"><p>&nbsp;</p>
+        <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+
+            La especificación léxica de 
+			los ficheros de entrada del trabajo a desarrollar (que describirán gramáticas en notación BNF) está formada por las 
+            siguientes categorías:</p>
+      <table style="border-color: #000000; border-collapse: collapse" id="AutoNumber4" width="90%" cellspacing="0" cellpadding="0" border="1" align="center">
+        <tbody><tr>
+          <td width="23%" bgcolor="#9999FF" align="center">&nbsp;Especificación</td>
+          <td width="49%" bgcolor="#9999FF" align="center">&nbsp;Expresión 
+          regular</td>
+        </tr>
+        <tr>
+          <td width="23%">&nbsp;blanco</td>
+          <td width="49%" align="center">&nbsp; ( " " | "\r" | "\n" | "\t" )</td>
+        </tr>
+        <tr>
+          <td width="23%">&nbsp;comentario</td>
+          <td width="49%" align="center">"/*" ( ("*")* ~["*", "/"] | "/" )* ("*")+ "/"</td>
+        </tr>
+        <tr>
+          <td width="23%">&nbsp;NOTERMINAL</td>
+          <td width="49%" align="center">["_","a"-"z","A"-"z"]&nbsp; ( 
+              ["_","a"-"z","A"-"Z","0"-"9"] )*</td>
+        </tr>
+        <tr>
+          <td width="23%">&nbsp;TERMIINAL</td>
+          <td width="49%" align="center">"&lt;" ["_","a"-"z","A"-"z"]&nbsp; ( 
+              ["_","a"-"z","A"-"Z","0"-"9"] )* "&gt;"</td>
+        </tr>
+        <tr>
+          <td width="23%">&nbsp;EQ</td>
+          <td width="49%" align="center">"::="</td>
+        </tr>
+        <tr>
+          <td width="23%">&nbsp;BAR</td>
+          <td width="49%" align="center">&nbsp;&nbsp;"|"</td>
+        </tr>
+        <tr>
+          <td width="23%">&nbsp;SEMICOLON</td>
+          <td width="49%" align="center">";"</td>
+        </tr>
+    </tbody></table>
+
+    <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+        La categoría NOTERMINAL está asociada a identificadores y se utiliza para 
+        referenciar a los símbolos no terminales de la gramática. La categoría TERMINAL se refiere 
+        a los símbolos terminales de la gramática, que se escriben como identificadores 
+        entre los signos menor ("&lt;") y mayor ("&gt;"). La categoría EQ se refiere a la 
+        flecha que separa las partes izquierda y derecha de una regla. La categoría BAR 
+        reconoce el separador entre diferentes reglas de un mismo símbolo no terminal. 
+        La categoría SEMICOLON reconoce el punto y coma que se utiliza como finalizador 
+        de las reglas de un símbolo no terminal.</p>
+     <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+        Los blancos se refieren a espacios, tabuladores y saltos de línea y corresponden 
+        a componentes léxicos que deben ser filtrados. Los comentarios, que también deben ser filtrados, son iguales que los 
+        comentarios multilínea de C.</p>
+     <p>&nbsp;</p>
+    </td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+<table style="border-color: #000000; border-collapse: collapse" id="AutoNumber5" width="100%" cellspacing="0" cellpadding="0" border="1">
+  <tbody><tr>
+    <td width="100%" bgcolor="#000080">
+    <p align="center"><span style="background-color: #000080">
+    <font color="#FFFFFF"><span style="font-weight: 700">ESPECIFICACIÓN SINTÁCTICA</span></font></span></p></td>
+  </tr>
+  <tr>
+    <td width="100%"><p>&nbsp;</p>
+    <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify; ">
+        La especificación sintáctica de los ficheros de entrada del 
+		trabajo a desarrollar (gramáticas en notación BNF)&nbsp; es la siguiente:</p>
+    <ul>
+      <li>
+    <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+        Gramatica ::= (&nbsp; Definicion&nbsp; )*</p>
+      </li>
+      <li>
+    <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+        Definicion&nbsp; ::= &nbsp;&nbsp; 
+        <b>NOTERMINAL</b>&nbsp;&nbsp; <strong>EQ</strong>&nbsp; ListaReglas&nbsp; <strong>
+        SEMICOLON</strong></p>
+      </li>
+      <li>
+    <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+        ListaReglas ::=&nbsp; Regla&nbsp; ( <strong>BAR</strong>&nbsp; Regla 
+        )*</p>
+      </li>
+      <li>
+    <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+        Regla ::=&nbsp; ( <strong>NOTERMINAL</strong> &nbsp;|&nbsp; <strong>
+        TERMINAL</strong>&nbsp;)*</p>
+      </li>
+    </ul>
+    <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+        Una 
+        gramática es un conjunto de definiciones. Cada definición describe el conjunto 
+        de reglas asociadas a un símbolo no terminal de la gramática. Estas definiciones 
+        están formadas por el identificador del símbolo no terminal (NOTERMINAL), 
+        seguido del símbolo EQ, seguido de las reglas asociadas a ese símbolo no 
+        terminal y terminado en SEMICOLON (es decir, un punto y coma). La lista de 
+        reglas está formada por reglas separadas por BAR (es, decir, una barra). Las 
+        reglas están formadas por una secuencia de símbolos terminales o no terminales. 
+        Para representar una regla lambda se utiliza una secuencia vacía.</p>
+    </td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+<table style="border-color: #000000; border-collapse: collapse" id="Table1" width="100%" cellspacing="0" cellpadding="0" border="1">
+  <tbody><tr>
+    <td width="100%" bgcolor="#000080">
+    <p align="center"><span style="background-color: #000080">
+    <font color="#FFFFFF"><span style="font-weight: 700">EJEMPLO DE FUNCIONAMIENTO</span></font></span></p></td>
+  </tr>
+  <tr>
+    <td width="100%"><p>&nbsp;</p>
+    <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify; ">
+        El siguiente texto describe un ejemplo de entrada correcta para la 
+		aplicación a desarrollar. Se trata de la descripción de las expresiones 
+		aritméticas formadas por sumas, restas, multiplicaciones y divisiones de 
+		números y llamadas a funciones que hemos utilizado como ejemplo del 
+		algoritmo de transformación.</p>
+    <table style="border-color: #000000; border-collapse: collapse" id="Table2" width="90%" cellspacing="0" cellpadding="0" border="1" align="center">
+     <tbody><tr>
+       <td width="100%" bgcolor="#9999FF" align="left">
+       &nbsp;&nbsp;/* Definición de una expresión aritmética como una suma o resta de términos */ <br>
+       &nbsp;&nbsp;Expr ::= Term <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Expr &lt;PLUS&gt; Term <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Expr &lt;MINUS&gt; Term <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; <br>
+       <br>
+       &nbsp;&nbsp;/* Los términos son productos o divisiones de factores */ <br>
+       &nbsp;&nbsp;Term ::= Factor <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Term &lt;PROD&gt; Factor <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Term &lt;DIV&gt; Factor <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; <br>
+       <br>
+       &nbsp;&nbsp;/* Los factores son constantes, expresiones entre paréntesis o llamadas a funciones */ <br>
+       &nbsp;&nbsp;Factor ::= &lt;NUM&gt; <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &lt;LPAREN&gt; Expr &lt;RPAREN&gt; <br> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &lt;IDENTIFIER&gt; &lt;LPAREN&gt; Args &lt;RPAREN&gt; <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; <br>
+       <br>
+       &nbsp;&nbsp;/* Las reglas lambda se crean con secuencias vacías, como la segunda línea de esta definición */ <br>
+       &nbsp;&nbsp;Args ::= ArgumentList <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; <br>
+       <br>
+       &nbsp;&nbsp;/* Los argumentos son una lista de expresiones separadas por coma */ <br>
+       &nbsp;&nbsp;ArgumentList ::= Expr <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| ArgumentList &lt;COMMA&gt; Expr <br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; <br>
+       <br>
+        &nbsp;
+       </td>
+     </tr>
+    </tbody></table>
+
+        <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+            La aplicación a desarrollar deberá analizar esta gramática y generar 
+			la gramática equivalente en Forma Normal de Chomsky utilizando el 
+			mismo formato para describir la salida. A continuación se presenta un fragmento del contenido del fichero 
+            a generar para este ejemplo. (El siguiente <a href="http://www.uhu.es/francisco.moreno/gii_pl/trabajo/ejemplo-fnc.txt">enlace</a> contiene el código completo del 
+			fichero a generar)</p>
+                <table style="border-color: #000000; border-collapse: collapse" id="Table4" width="90%" cellspacing="0" cellpadding="0" border="1" align="center">
+     <tbody><tr>
+       <td width="100%" bgcolor="#9999FF" align="left">
+        &nbsp;<br>
+        &nbsp; Expr ::= Expr Aux9 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Expr Aux10 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Term 
+		Aux11 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Term Aux12 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Aux5 Aux13
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Aux7 Aux14 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Aux7 Aux16 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
+		&lt;NUM&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;<br><br>&nbsp;&nbsp; 
+		...<br>
+        <br>
+       </td>
+     </tr>
+    </tbody></table>
+    <p style="margin-left: 20; margin-right: 20; margin-bottom: 15; text-align: justify;">
+           &nbsp;</p>
+
+    </td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+<table style="border-color: #000000; border-collapse: collapse" id="AutoNumber6" width="100%" cellspacing="0" cellpadding="0" border="1">
+  <tbody><tr>
+    <td width="100%" bgcolor="#000080">
+    <p align="center"><span style="background-color: #000080">
+    <font color="#FFFFFF"><span style="font-weight: 700">DESARROLLO DEL TRABAJO</span></font></span></p></td>
+  </tr>
+  <tr>
+    <td width="100%"><p>&nbsp;</p>
+    <blockquote>
+      <p>Los pasos a realizar en el desarrollo del trabajo son los siguientes:</p>
+      <ol>
+        <li>Desarrollar el fichero JavaCC que genere el analizador léxico y 
+		sintáctico que permita procesar los ficheros de entrada.</li>
+        <li>Definir las clases necesarias para describir el Árbol de 
+            Sintaxis Abstracta a utilizar en el trabajo.</li>
+          <li>Ampliar el analizador sintáctico para considerar la semántica, es decir, 
+              construir un analizador semántico que tome como entrada la descripción en modo 
+              texto de una Gramática BNF y genere como salida una estructura de datos que 
+              represente la Gramática BNF reconocida.</li>
+          <li>Programar el algoritmo de transformación de la gramática en Forma 
+		  Normal de Chomsky.</li>
+          <li>Programar la generación del fichero de salida con el formato 
+		  planteado.</li>
+        <li>Realizar un conjunto de pruebas sobre la aplicación.</li>
+      </ol>
+    </blockquote>
+    </td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+<table style="border-color: #000000; border-collapse: collapse" id="AutoNumber7" width="100%" cellspacing="0" cellpadding="0" border="1">
+  <tbody><tr>
+    <td width="100%" bgcolor="#000080">
+    <p align="center"><span style="background-color: #000080">
+    <font color="#FFFFFF"><span style="font-weight: 700">DOCUMENTACIÓN A ENTREGAR</span></font></span></p></td>
+  </tr>
+  <tr>
+    <td width="100%"><p>&nbsp;</p>
+    <blockquote>
+      Se entregará el código desarrollado en formato electrónico (debidamente 
+      compilado) así como una memoria descriptiva del trabajo. La memoria a 
+      entregar debe incluir los siguientes puntos:<ul>
+        <li>Descripción del fichero JavaCC utilizado para generar el analizador 
+		léxico y sintáctico.</li>
+        <li>Código de las clases que desarrollan el Árbol de Sintaxis Abstracta.</li>
+            <li>Descripción del fichero JavaCC que incluya la fase semántica.</li>
+            <li>Descripción de las clases y métodos utilizados para programar el 
+			algoritmo de transformación a Forma Normal de Chomsky</li>
+        <li>Pruebas del funcionamiento de la aplicación.</li>
+      </ul>
+    </blockquote>
+    </td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+<table style="border-color: #000000; border-collapse: collapse" id="AutoNumber8" width="100%" cellspacing="0" cellpadding="0" border="1">
+  <tbody><tr>
+    <td width="100%" bgcolor="#000080">
+    <p align="center"><span style="background-color: #000080">
+    <font color="#FFFFFF"><span style="font-weight: 700">PLAZO DE ENTREGA</span></font></span></p></td>
+  </tr>
+  <tr>
+    <td width="100%"><p>&nbsp;</p>
+    <ul>
+        <li>La fecha límite de entrega para su evaluación en la convocatoria de junio 
+            será el viernes 2 de julio de 2021.</li>
+        <li>La fecha límite de entrega para su evaluación en la convocatoria de 
+            septiembre será el viernes 10 de septiembre de 2021.</li>
+    </ul>
+    </td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+</td>
+</tr>
+</tbody></table>
+
+
+
+<p>&nbsp;</p>
+
+
+
+
+
+</body></html>

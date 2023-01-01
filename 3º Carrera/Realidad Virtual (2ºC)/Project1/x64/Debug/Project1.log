@@ -1,6 +1,0 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(473,5): warning MSB8003: La propiedad WindowsSDKDir no está definida. No se encuentran algunas herramientas de compilación.
-  CGApplication.cpp
-C:\ComputerGraphics\Tools\GLEW\include\GL\glew.h(1205,14): fatal error C1083: No se puede abrir el archivo incluir: 'GL/glu.h': No such file or directory
-  CGModel.cpp
-C:\ComputerGraphics\Tools\GLEW\include\GL\glew.h(1205,14): fatal error C1083: No se puede abrir el archivo incluir: 'GL/glu.h': No such file or directory
-  Generando código...

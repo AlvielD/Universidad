@@ -1,0 +1,25 @@
+﻿  CGApplication.cpp
+  CGCamera.cpp
+  CGFigure.cpp
+  CGFog.cpp
+  CGGround.cpp
+G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Projects\RocketTrainer\RocketTrainer\CGGround.cpp(42,23): warning C4018: '<': no coinciden signed/unsigned
+G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Projects\RocketTrainer\RocketTrainer\CGGround.cpp(45,23): warning C4018: '<': no coinciden signed/unsigned
+G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Projects\RocketTrainer\RocketTrainer\CGGround.cpp(48,23): warning C4018: '<': no coinciden signed/unsigned
+G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Projects\RocketTrainer\RocketTrainer\CGGround.cpp(51,23): warning C4018: '<': no coinciden signed/unsigned
+  CGLight.cpp
+  CGMaterial.cpp
+  CGModel.cpp
+  CGScene.cpp
+  CGShaderProgram.cpp
+  CGSkybox.cpp
+  CGSphere.cpp
+G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Projects\RocketTrainer\RocketTrainer\CGSphere.cpp(29,45): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Projects\RocketTrainer\RocketTrainer\CGSphere.cpp(52,47): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Projects\RocketTrainer\RocketTrainer\CGSphere.cpp(68,45): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  main.cpp
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+  All 168 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  RocketTrainer.vcxproj -> G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Projects\RocketTrainer\x64\Release\RocketTrainer.exe

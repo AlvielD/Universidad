@@ -1,0 +1,27 @@
+/* Definición de una expresión aritmética como una suma o resta de términos */
+Expr ::= Term
+	| Expr <PLUS> Term
+    | Expr <MINUS> Term
+    ;
+
+/* Los términos son productos o divisiones de factores */
+Term ::= Factor
+	| Term <PROD> Factor
+    | Term <DIV> Factor
+    ;
+
+/* Los factores son constantes, expresiones entre paréntesis o llamadas a funciones */
+Factor ::= <NUM>
+	| <LPAREN> Expr <RPAREN>
+    | <IDENTIFIER> <LPAREN> Args <RPAREN>
+    ;
+
+/* Las reglas lambda se crean con secuencias vacías, como la segunda línea de esta definición */
+Args ::= ArgumentList
+	|
+    ;
+	
+/* Los argumentos son una lista de expresiones separadas por coma */
+ArgumentList ::= Expr
+	| ArgumentList <COMMA> Expr
+	; 

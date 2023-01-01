@@ -1,0 +1,100 @@
+Gramática: 
+
+ Expr ::= Expr Aux9 
+ | Expr Aux10 
+ | Term Aux11 
+ | Term Aux12 
+ | <NUM> 
+ | Aux5 Aux13 
+ | Aux7 Aux14 
+ | Aux7 Aux15 
+ ; 
+
+Term ::= Term Aux11 
+ | Term Aux12 
+ | <NUM> 
+ | Aux5 Aux13 
+ | Aux7 Aux14 
+ | Aux7 Aux15 
+ ; 
+
+Factor ::= <NUM> 
+ | Aux5 Aux13 
+ | Aux7 Aux14 
+ | Aux7 Aux15 
+ ; 
+
+Args ::= ArgumentList Aux16 
+ | Expr Aux9 
+ | Expr Aux10 
+ | Term Aux11 
+ | Term Aux12 
+ | <NUM> 
+ | Aux5 Aux13 
+ | Aux7 Aux14 
+ | Aux7 Aux15 
+ ; 
+
+ArgumentList ::= ArgumentList Aux16 
+ | Expr Aux9 
+ | Expr Aux10 
+ | Term Aux11 
+ | Term Aux12 
+ | <NUM> 
+ | Aux5 Aux13 
+ | Aux7 Aux14 
+ | Aux7 Aux15 
+ ; 
+
+Aux1 ::= <PLUS> 
+ ; 
+
+Aux2 ::= <MINUS> 
+ ; 
+
+Aux3 ::= <PROD> 
+ ; 
+
+Aux4 ::= <DIV> 
+ ; 
+
+Aux5 ::= <LPAREN> 
+ ; 
+
+Aux6 ::= <RPAREN> 
+ ; 
+
+Aux7 ::= <IDENTIFIER> 
+ ; 
+
+Aux8 ::= <COMMA> 
+ ; 
+
+Aux9 ::= Aux1 Term 
+ ; 
+
+Aux10 ::= Aux2 Term 
+ ; 
+
+Aux11 ::= Aux3 Factor 
+ ; 
+
+Aux12 ::= Aux4 Factor 
+ ; 
+
+Aux13 ::= Expr Aux6 
+ ; 
+
+Aux14 ::= Aux5 Aux17 
+ ; 
+
+Aux15 ::= Aux5 Aux6 
+ ; 
+
+Aux16 ::= Aux8 Expr 
+ ; 
+
+Aux17 ::= Args Aux6 
+ ; 
+
+

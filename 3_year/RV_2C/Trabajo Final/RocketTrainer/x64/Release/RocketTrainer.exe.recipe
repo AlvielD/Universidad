@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Projects\RocketTrainer\x64\Release\RocketTrainer.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Projects\RocketTrainer\RocketTrainer\FragmentShader.htm</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Projects\RocketTrainer\RocketTrainer\VertexShader.htm</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

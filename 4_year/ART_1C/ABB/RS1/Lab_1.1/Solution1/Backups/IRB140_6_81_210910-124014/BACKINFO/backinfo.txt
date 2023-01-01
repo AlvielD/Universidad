@@ -1,0 +1,39 @@
+#
+# Generated backup file, do not edit.
+#
+# Originally at: C:\Users\aeste\AppData\Local\Temp\c0d00bcb
+# 21-09-10  12:40:14
+#
+>>SYSTEM_ID:
+VIRTUAL_USE
+
+>>PRODUCTS_ID:
+RobotWare Version: 6.01.0123
+
+  RobotWare Base
+  English
+  Drive System IRB 120/140/260/360/1200/1400/1520/1600
+  ADU-790A in position X3
+  ADU-790A in position Y3
+  ADU-790A in position Z3
+  IRB 140-6/0.8
+
+>>HOME:
+All public files and directories
+
+>>SYSPAR:
+SYS.cfg
+PROC.cfg
+MMC.cfg
+EIO.cfg
+SIO.cfg
+MOC.cfg
+
+
+>>TASK1: (T_ROB1,T_ROB1_Modules,)
+SYSMOD\user.sys @ user.sys
+SYSMOD\LINKEDM.sys @ linkedm.sys
+PROGMOD\Module1.mod @ module1.mod
+
+
+>>EOF:

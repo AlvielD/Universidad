@@ -1,0 +1,5 @@
+pytest
+nltk
+requests
+sqlitedict
+ir_datasets

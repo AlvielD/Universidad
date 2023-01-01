@@ -1,0 +1,13 @@
+ir_datasets
+nltk
+sqlitedict
+dataclasses
+sklearn
+pandas
+numpy
+pyterrier
+pytest
+ipytest
+python-terrier
+setuptools
+cython

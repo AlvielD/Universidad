@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f6f3e1b8-14c5-4674-b250-c4e0a8dfea56}</ProjectGuid>
+    <RootNamespace>RocketTrainer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\ComputerGraphics\Tools\FreeImage\Include;C:\ComputerGraphics\Tools\GLEW\include;C:\ComputerGraphics\Tools\GLFW\include;C:\ComputerGraphics\Tools\GLM\Include;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\ComputerGraphics\Tools\FreeImage\Lib;C:\ComputerGraphics\Tools\GLEW\lib\Release\x64;C:\ComputerGraphics\Tools\GLFW\lib-vc2019;%(AdditionalLibraryDirectories);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;FreeImage.lib;glfw3.lib;%(AdditionalDependencies);</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\ComputerGraphics\Tools\FreeImage\Include;C:\ComputerGraphics\Tools\GLEW\include;C:\ComputerGraphics\Tools\GLFW\include;C:\ComputerGraphics\Tools\GLM\Include;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\ComputerGraphics\Tools\FreeImage\Lib;C:\ComputerGraphics\Tools\GLEW\lib\Release\x64;C:\ComputerGraphics\Tools\GLFW\lib-vc2019;%(AdditionalLibraryDirectories);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;FreeImage.lib;glfw3.lib;%(AdditionalDependencies);</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\ComputerGraphics\Tools\FreeImage\Include;C:\ComputerGraphics\Tools\GLEW\include;C:\ComputerGraphics\Tools\GLFW\include;C:\ComputerGraphics\Tools\GLM\Include;%(AdditionalIncludeDirectories);G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\GLFW\include;G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\GLEW\include;G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\FreeImage\Include;G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\GLM\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\ComputerGraphics\Tools\FreeImage\Lib;C:\ComputerGraphics\Tools\GLEW\lib\Release\x64;C:\ComputerGraphics\Tools\GLFW\lib-vc2019;%(AdditionalLibraryDirectories);G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\FreeImage\Lib;G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\GLEW\lib\Release\x64;G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\GLFW\lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;FreeImage.lib;glfw3.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\ComputerGraphics\Tools\FreeImage\Include;C:\ComputerGraphics\Tools\GLEW\include;C:\ComputerGraphics\Tools\GLFW\include;C:\ComputerGraphics\Tools\GLM\Include;%(AdditionalIncludeDirectories);G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\GLFW\include;G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\GLEW\include;G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\FreeImage\Include;G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\GLM\Include;</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\ComputerGraphics\Tools\FreeImage\Lib;C:\ComputerGraphics\Tools\GLEW\lib\Release\x64;C:\ComputerGraphics\Tools\GLFW\lib-vc2019;%(AdditionalLibraryDirectories);G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\FreeImage\Lib;G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\GLEW\lib\Release\x64;G:\Universidad\3º Carrera\2º Cuatrimestre\RV\Prácticas\Trabajo Final\ComputerGraphics\Tools\GLFW\lib-vc2019</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;FreeImage.lib;glfw3.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="RocketTrainer\ParedFrontal.cpp" />
+    <ClCompile Include="RocketTrainer\CGObject.cpp" />
+    <ClCompile Include="RocketTrainer\CGSlotCar.cpp" />
+    <ClCompile Include="RocketTrainer\CGSlotCar_pieces.cpp" />
+    <ClCompile Include="RocketTrainer\Pared.cpp" />
+    <ClCompile Include="RocketTrainer\Porteria.cpp" />
+    <ClCompile Include="RocketTrainer\CGApplication.cpp" />
+    <ClCompile Include="RocketTrainer\CGFigure.cpp" />
+    <ClCompile Include="RocketTrainer\CGFog.cpp" />
+    <ClCompile Include="RocketTrainer\CGGround.cpp" />
+    <ClCompile Include="RocketTrainer\CGLight.cpp" />
+    <ClCompile Include="RocketTrainer\CGMaterial.cpp" />
+    <ClCompile Include="RocketTrainer\CGModel.cpp" />
+    <ClCompile Include="RocketTrainer\CGScene.cpp" />
+    <ClCompile Include="RocketTrainer\CGShaderProgram.cpp" />
+    <ClCompile Include="RocketTrainer\CGSkybox.cpp" />
+    <ClCompile Include="RocketTrainer\CGSphere.cpp" />
+    <ClCompile Include="RocketTrainer\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RocketTrainer\ParedFrontal.h" />
+    <ClInclude Include="RocketTrainer\CGObject.h" />
+    <ClInclude Include="RocketTrainer\CGSlotCar.h" />
+    <ClInclude Include="RocketTrainer\CGSlotCar_pieces.h" />
+    <ClInclude Include="RocketTrainer\Pared.h" />
+    <ClInclude Include="RocketTrainer\Porteria.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="RocketTrainer\CGApplication.h" />
+    <ClInclude Include="RocketTrainer\CGFigure.h" />
+    <ClInclude Include="RocketTrainer\CGFog.h" />
+    <ClInclude Include="RocketTrainer\CGGround.h" />
+    <ClInclude Include="RocketTrainer\CGLight.h" />
+    <ClInclude Include="RocketTrainer\CGMaterial.h" />
+    <ClInclude Include="RocketTrainer\CGModel.h" />
+    <ClInclude Include="RocketTrainer\CGScene.h" />
+    <ClInclude Include="RocketTrainer\CGShaderProgram.h" />
+    <ClInclude Include="RocketTrainer\CGSkybox.h" />
+    <ClInclude Include="RocketTrainer\CGSphere.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RocketTrainer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FragmentShader.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="VertexShader.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

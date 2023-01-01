@@ -1,0 +1,4 @@
+python >= 3.7
+pytest
+elasticsearch >= 7.15
+wikipedia-api

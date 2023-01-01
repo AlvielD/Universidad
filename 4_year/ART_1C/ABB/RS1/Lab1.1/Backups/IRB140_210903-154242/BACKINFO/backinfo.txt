@@ -1,0 +1,37 @@
+#
+# Generated backup file, do not edit.
+#
+# Originally at: C:\Users\aeste\OneDrive - UNIVERSIDAD DE HUELVA\Universidad\4º Carrera (Stavanger)\Autumn Semester\ART\ABB\RS1\Lab1.1\Virtual Controllers\TEMP\7249ebab-f283-41a6-9d82-2499cf8345ce\backup.809814
+# 2021-09-03  15:42:42
+#
+>>SYSTEM_ID:
+VIRTUAL_USE
+
+>>PRODUCTS_ID:
+RobotWare Version: 6.12.02.00
+
+  RobotWare Base
+  English
+  Drive System IRB 120/140/260/360/910SC/1200/1400/1520/1600/1660ID
+  ADU-790A in position X3
+  ADU-790A in position Y3
+  ADU-790A in position Z3
+  IRB 140-6/0.8
+
+>>HOME:
+All public files and directories
+
+>>SYSPAR:
+SYS.cfg
+PROC.cfg
+MMC.cfg
+EIO.cfg
+SIO.cfg
+MOC.cfg
+
+
+>>TASK1: (T_ROB1,,)
+SYSMOD\user.sys @ 
+
+
+>>EOF:

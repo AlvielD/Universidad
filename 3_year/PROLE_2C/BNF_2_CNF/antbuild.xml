@@ -1,0 +1,16 @@
+<project name="BNF2CNF" default="dist" basedir=".">
+  <description>  build file for BNF2CNF compiler </description>
+	
+  <target name="dist" description="generate the distribution" >
+
+
+    <!-- Put everything in /bin into the tintoc.jar file -->
+    <jar jarfile="bnf2cnfComp.jar" 
+         manifest="BNF2CNF_Manifest.mf"
+         basedir="bin" />
+
+
+  </target>
+
+
+</project>

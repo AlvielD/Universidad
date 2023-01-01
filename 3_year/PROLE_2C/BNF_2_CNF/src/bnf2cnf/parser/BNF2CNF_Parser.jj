@@ -1,0 +1,245 @@
+/* opciones generales */
+
+options {
+   STATIC = false;
+}
+
+PARSER_BEGIN(BNF2CNF_Parser) /* definición del nombre del analizador */
+
+/* codigo Java utilizado en la descripción del analizador */
+
+package bnf2cnf.parser;
+
+import java.io.*;
+import java.util.ArrayList;
+
+import bnf2cnf.ast.Symbols.*;
+import bnf2cnf.ast.*;
+
+public class BNF2CNF_Parser {
+  
+ 	//----------------------------------------------------------------//
+	//                        Miembros privados                       //
+	//----------------------------------------------------------------//
+	/**
+	 * Contador de errores
+	 */
+	private int errorCount;
+	
+	/**
+	 * Mensaje de errores
+	 */
+	private String errorMsg;
+  
+	//----------------------------------------------------------------//
+	//       Métodos relacionados con el tratamiento de errores       //
+	//----------------------------------------------------------------//
+	/**
+	 * Analiza un fichero ".bnc" añadiendo la información del cuerpo de los métodos
+	 */
+	public void BNF2CNF_Parser()
+	{
+	    this.errorCount = 0;
+	    this.errorMsg = "";
+	}
+	/**
+	 * Obtiene el número de errores del análisis
+	 * @return
+	 */
+	public int getErrorCount()
+	{
+		return this.errorCount;
+	}
+	
+	/**
+	 * Obtiene el mensaje de error del análisis
+	 * @return
+	 */
+	public String getErrorMsg()
+	{
+		return this.errorMsg;
+	}
+	
+	/**
+	 * Almacena un error de análisis
+	 * @param ex
+	 */
+	private void catchError(Exception ex)
+	{
+		this.errorCount++;
+		this.errorMsg += ex.toString();
+	}
+}
+
+PARSER_END(BNF2CNF_Parser)
+
+
+/* ESPECIFICACIÓN LÉXICA DE LA GRAMÁTICA */
+
+/* Blanco */
+
+SKIP:
+{
+     " "
+   | "\n"
+   | "\r"
+   | "\t"
+}
+
+/* Comentario */
+
+SKIP:
+{
+   < COMENTARIO: "/*" ( ("*")* ~["*", "/"] | "/" )* ("*")+ "/" > 
+}
+
+ /* Identificadores */
+
+TOKEN:
+{
+    < NOTERMINAL: ["_","a"-"z","A"-"z"]  ( ["_","a"-"z","A"-"Z","0"-"9"] )* >
+|
+	< TERMINAL: "<" ["_","a"-"z","A"-"z"]  ( ["_","a"-"z","A"-"Z","0"-"9"] )* ">" > 
+}
+
+/* Operadores */
+
+TOKEN:
+{
+	< EQ: "::=" >
+}
+
+/* Separadores */
+
+TOKEN:
+{
+	< BAR: "|" >
+|
+	< SEMICOLON: ";" >
+}
+
+
+/* ESPECIFICACIÓN SINTÁCTICA DE LA GRAMÁTICA */
+
+
+Gramatica Gramatica() :
+{
+  int[] lsync = { NOTERMINAL, TERMINAL, SEMICOLON, BAR, EQ };
+  int[] rsync = { EOF };
+  Gramatica G;
+  Definicion D = null;
+  ArrayList<Definicion> Definiciones = new ArrayList<Definicion>();
+}
+{
+  	try
+  	{ 
+    	( D = Definicion() { Definiciones.add(D); }
+    	)*
+    	<EOF>
+  	}
+  	catch(Exception ex)
+  	{
+  	  	catchError(ex);
+   		skipTo(lsync,rsync);
+  	}
+    {
+      G = new Gramatica(Definiciones);
+      return G;
+    }
+}
+
+Definicion Definicion() :
+{
+  int[] lsync = { SEMICOLON };
+  int[] rsync = { };
+  Definicion D;
+  Token tk;
+  NTSymbol NT = null;
+  ArrayList<Regla> LR = new ArrayList<Regla>();
+}
+{
+  	try
+  	{ 
+  		tk = <NOTERMINAL> { NT = new NTSymbol(tk.image); } <EQ> ListaReglas(LR) <SEMICOLON>
+  	}
+  	catch(Exception ex)
+  	{
+  		catchError(ex);
+    	skipTo(lsync,rsync);
+	}
+ 	{
+	    D = new Definicion(NT, LR);
+	    return D;
+  	}
+}
+
+void ListaReglas(ArrayList<Regla> LR) :
+{
+  int[] lsync = { };
+  int[] rsync = { SEMICOLON };
+  Regla R = null;
+}
+{
+  	try
+  	{ 
+	  R = Regla(LR)
+	  (
+	     <BAR> R = Regla(LR)
+	  )*
+	}
+	catch(Exception ex)
+	{
+	    catchError(ex);
+    	skipTo(lsync,rsync);
+	}
+}
+
+Regla Regla(ArrayList<Regla> LR) :
+{
+	int[] lsync = { };
+	int[] rsync = { BAR, SEMICOLON };
+	Token tk = null;
+	Symbol S;
+	Regla R;
+	ArrayList<Symbol> Simbolos = new ArrayList<Symbol>();
+}
+{
+	try
+	{ 
+	  	(
+	    tk = <NOTERMINAL>	{ S = new NTSymbol(tk.image);	Simbolos.add(S); }
+	   	| tk = <TERMINAL>	{ S = new TSymbol(tk.image);	Simbolos.add(S); }
+	  	)*
+	}
+	catch(Exception ex)
+	{
+	    catchError(ex);
+    	skipTo(lsync,rsync);
+	}
+ 	{
+    	R = new Regla(Simbolos);
+    	LR.add(R);
+   		return R;
+ 	}
+}
+
+JAVACODE
+void skipTo(int[] left, int[] right)
+{
+  Token prev = getToken(0);
+  Token next = getToken(1);
+  boolean flag = false;
+  if(prev.kind == EOF || next.kind == EOF) flag = true;
+  for(int i=0; i<left.length; i++) if(prev.kind == left[i]) flag = true;
+  for(int i=0; i<right.length; i++) if(next.kind == right[i]) flag = true;
+	
+  while(!flag)
+  {
+    getNextToken();
+    prev = getToken(0);
+    next = getToken(1);
+    if(prev.kind == EOF || next.kind == EOF) flag = true;
+    for(int i=0; i<left.length; i++) if(prev.kind == left[i]) flag = true;
+    for(int i=0; i<right.length; i++) if(next.kind == right[i]) flag = true;
+  }
+}

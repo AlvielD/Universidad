@@ -1,0 +1,40 @@
+#
+# Generated backup file, do not edit.
+#
+# Originally at: C:\Users\aeste\OneDrive - UNIVERSIDAD DE HUELVA\Universidad\4º Carrera (Stavanger)\Autumn Semester\ART\ABB\RS3\Lab3.1\Systems\TEMP\88f5dc39-f71f-4bfe-9c8d-00ae23cfa6da\backup.081545
+# 2021-09-17  14:59:43
+#
+>>SYSTEM_ID:
+VIRTUAL_USE
+
+>>PRODUCTS_ID:
+RobotWare Version: 6.12.02.00
+
+  RobotWare Base
+  English
+  Drive System IRB 120/140/260/360/910SC/1200/1400/1520/1600/1660ID
+  ADU-790A in position X3
+  ADU-790A in position Y3
+  ADU-790A in position Z3
+  IRB 140-6/0.8
+
+>>HOME:
+All public files and directories
+
+>>SYSPAR:
+SYS.cfg
+PROC.cfg
+MMC.cfg
+EIO.cfg
+SIO.cfg
+MOC.cfg
+
+
+>>TASK1: (T_ROB1,E458Norbert,)
+SYSMOD\user.sys @ 
+PROGMOD\gripper.mod @ 
+PROGMOD\E458GripperTest.mod @ 
+SYSMOD\LINKEDM.sys @ 
+
+
+>>EOF:

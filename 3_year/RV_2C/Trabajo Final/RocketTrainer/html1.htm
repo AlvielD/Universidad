@@ -1,0 +1,35 @@
+ #version 400
+
+ layout(location = 0) in vec3 VertexPosition;
+ layout(location = 1) in vec3 VertexNormal;
+ layout(location = 2) in vec2 VertexTexCoord;
+
+ uniform mat4 MVP;
+ uniform mat4 ViewMatrix;
+ uniform mat4 ModelViewMatrix;
+ uniform bool DrawSkybox;
+
+ out vec3 Position;
+ out vec3 Normal;
+ out vec2 TexCoord;
+
+ void main()
+ {
+   if(DrawSkybox)
+   {
+     Normal = vec3(1.0,0.0,0.0);
+     TexCoord = vec2(0.0,0.0);
+     gl_Position = vec4(VertexPosition,1.0);
+     Position = vec3(MVP * gl_Position);
+     Position = normalize(Position);
+   }
+   else
+   {
+     vec4 n4 = ModelViewMatrix*vec4(VertexNormal, 0.0);
+     vec4 v4 = ModelViewMatrix*vec4(VertexPosition, 1.0);
+     Normal = vec3(n4);
+     Position = vec3(v4);
+     TexCoord = VertexTexCoord;
+     gl_Position = MVP * vec4(VertexPosition, 1.0);
+   }
+ }

@@ -1,0 +1,298 @@
+
+
+ ▒█▀▀█ ▒█▀▀█ ▒█▀▀▀█ ▒█▀▀█ ▒█░░░ ▒█▀▀▀ ▒█▀▄▀█ ░█▀▀█   ▒█▀▀▄ ▒█▀▀▀   ▒█▀▀█ ▒█░░░ ▒█▀▀▀█ ▒█▀▀█ ▒█░▒█ ▒█▀▀▀ ▒█▀▀▀█ 
+ ▒█▄▄█ ▒█▄▄▀ ▒█░░▒█ ▒█▀▀▄ ▒█░░░ ▒█▀▀▀ ▒█▒█▒█ ▒█▄▄█   ▒█░▒█ ▒█▀▀▀   ▒█▀▀▄ ▒█░░░ ▒█░░▒█ ▒█░▒█ ▒█░▒█ ▒█▀▀▀ ░▀▀▀▄▄ 
+ ▒█░░░ ▒█░▒█ ▒█▄▄▄█ ▒█▄▄█ ▒█▄▄█ ▒█▄▄▄ ▒█░░▒█ ▒█░▒█   ▒█▄▄▀ ▒█▄▄▄   ▒█▄▄█ ▒█▄▄█ ▒█▄▄▄█ ░▀▀█▄ ░▀▄▄▀ ▒█▄▄▄ ▒█▄▄▄█ 
+
+									Álvaro Esteban Muñoz, Jesús Valeo Fernández (c) 2021.
+
+
+
+[#] Estado Inicial: [  DESPEJADO(C),  DESPEJADO(B),  DESPEJADO(A),  BRAZOLIBRE(),  SOBRELAMESA(C),  SOBRELAMESA(B),  SOBRELAMESA(A) ]
+[#] Objetivos: [  SOBRE(A, B),  SOBRE(B, C) ]
+[+] Operadores posibles: { AGARRAR([X]), APILAR([X], [Y]), BAJAR([X]), DESAPILAR([X], [Y]) } 
+
+
+Iniciado el algoritmo STRIPS:
+Estado actual de la pila: 
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila: [  SOBRE(A, B),  SOBRE(B, C) ] (Conjunción de Predicados)
+No se cumple la conjunción. Se agrega una posible combinación de sus elementos.
+Estado actual de la pila: 
+	 SOBRE(B, C)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila:  SOBRE(B, C) (Predicado)
+El predicado  SOBRE(B, C) ya está instanciado.
+Buscando algún operador que agregue el predicado anterior...
+	Analizando el operador AGARRAR([X]):
+		La postcondición  AGARRADO([X]) no es válida.
+		La postcondición ¬ DESPEJADO([X]) no es válida.
+		La postcondición ¬ SOBRELAMESA([X]) no es válida.
+		La postcondición ¬ BRAZOLIBRE() no es válida.
+	Analizando el operador APILAR([X], [Y]):
+		La postcondición  BRAZOLIBRE() no es válida.
+		La postcondición  SOBRE([X], [Y]) es válida.
+		La postcondición  DESPEJADO([X]) no es válida.
+		La postcondición ¬ DESPEJADO([Y]) no es válida.
+		La postcondición ¬ AGARRADO([X]) no es válida.
+	Analizando el operador BAJAR([X]):
+		La postcondición  DESPEJADO([X]) no es válida.
+		La postcondición  SOBRELAMESA([X]) no es válida.
+		La postcondición  BRAZOLIBRE() no es válida.
+		La postcondición ¬ AGARRADO([X]) no es válida.
+	Analizando el operador DESAPILAR([X], [Y]):
+		La postcondición  AGARRADO([X]) no es válida.
+		La postcondición  DESPEJADO([Y]) no es válida.
+		La postcondición ¬ SOBRE([X], [Y]) no es válida.
+		La postcondición ¬ DESPEJADO([X]) no es válida.
+		La postcondición ¬ BRAZOLIBRE() no es válida.
+Operadores posibles encontrados: APILAR(B, C)
+Se introduce el operador: APILAR(B, C) en la pila.
+Estado actual de la pila: 
+	APILAR(B, C)
+	 SOBRE(B, C)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila: APILAR(B, C) (Operador)
+Se intenta aplicar el operador APILAR(B, C).
+No se puede aplicar el operador. Se introducen sus precondiciones en la pila.
+Estado actual de la pila: 
+	[  DESPEJADO(C),  AGARRADO(B) ]
+	APILAR(B, C)
+	 SOBRE(B, C)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila: [  DESPEJADO(C),  AGARRADO(B) ] (Conjunción de Predicados)
+No se cumple la conjunción. Se agrega una posible combinación de sus elementos.
+Estado actual de la pila: 
+	 AGARRADO(B)
+	 DESPEJADO(C)
+	[  DESPEJADO(C),  AGARRADO(B) ]
+	APILAR(B, C)
+	 SOBRE(B, C)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila:  AGARRADO(B) (Predicado)
+El predicado  AGARRADO(B) ya está instanciado.
+Buscando algún operador que agregue el predicado anterior...
+	Analizando el operador AGARRAR([X]):
+		La postcondición  AGARRADO([X]) es válida.
+		La postcondición ¬ DESPEJADO([X]) no es válida.
+		La postcondición ¬ SOBRELAMESA([X]) no es válida.
+		La postcondición ¬ BRAZOLIBRE() no es válida.
+	Analizando el operador APILAR([X], [Y]):
+		La postcondición  BRAZOLIBRE() no es válida.
+		La postcondición  SOBRE([X], [Y]) no es válida.
+		La postcondición  DESPEJADO([X]) no es válida.
+		La postcondición ¬ DESPEJADO([Y]) no es válida.
+		La postcondición ¬ AGARRADO([X]) no es válida.
+	Analizando el operador BAJAR([X]):
+		La postcondición  DESPEJADO([X]) no es válida.
+		La postcondición  SOBRELAMESA([X]) no es válida.
+		La postcondición  BRAZOLIBRE() no es válida.
+		La postcondición ¬ AGARRADO([X]) no es válida.
+	Analizando el operador DESAPILAR([X], [Y]):
+		La postcondición  AGARRADO([X]) no es válida.
+		La postcondición  DESPEJADO([Y]) no es válida.
+		La postcondición ¬ SOBRE([X], [Y]) no es válida.
+		La postcondición ¬ DESPEJADO([X]) no es válida.
+		La postcondición ¬ BRAZOLIBRE() no es válida.
+Operadores posibles encontrados: AGARRAR(B)
+Se introduce el operador: AGARRAR(B) en la pila.
+Estado actual de la pila: 
+	AGARRAR(B)
+	 AGARRADO(B)
+	 DESPEJADO(C)
+	[  DESPEJADO(C),  AGARRADO(B) ]
+	APILAR(B, C)
+	 SOBRE(B, C)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila: AGARRAR(B) (Operador)
+Se intenta aplicar el operador AGARRAR(B).
+Se puede aplicar el operador. Se aplican sus postcondiciones.
+Estado actual de la pila: 
+	 AGARRADO(B)
+	 DESPEJADO(C)
+	[  DESPEJADO(C),  AGARRADO(B) ]
+	APILAR(B, C)
+	 SOBRE(B, C)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila:  AGARRADO(B) (Predicado)
+El predicado  AGARRADO(B) ya está instanciado.
+Se cumple y se quita el predicado:  AGARRADO(B)
+Estado actual de la pila: 
+	 DESPEJADO(C)
+	[  DESPEJADO(C),  AGARRADO(B) ]
+	APILAR(B, C)
+	 SOBRE(B, C)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila:  DESPEJADO(C) (Predicado)
+El predicado  DESPEJADO(C) ya está instanciado.
+Se cumple y se quita el predicado:  DESPEJADO(C)
+Estado actual de la pila: 
+	[  DESPEJADO(C),  AGARRADO(B) ]
+	APILAR(B, C)
+	 SOBRE(B, C)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila: [  DESPEJADO(C),  AGARRADO(B) ] (Conjunción de Predicados)
+Se cumple y se quita la conjunción de predicados: 
+[  DESPEJADO(C),  AGARRADO(B) ]
+Estado actual de la pila: 
+	APILAR(B, C)
+	 SOBRE(B, C)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila: APILAR(B, C) (Operador)
+Se intenta aplicar el operador APILAR(B, C).
+Se puede aplicar el operador. Se aplican sus postcondiciones.
+Estado actual de la pila: 
+	 SOBRE(B, C)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila:  SOBRE(B, C) (Predicado)
+El predicado  SOBRE(B, C) ya está instanciado.
+Se cumple y se quita el predicado:  SOBRE(B, C)
+Estado actual de la pila: 
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila:  SOBRE(A, B) (Predicado)
+El predicado  SOBRE(A, B) ya está instanciado.
+Buscando algún operador que agregue el predicado anterior...
+	Analizando el operador AGARRAR([X]):
+		La postcondición  AGARRADO([X]) no es válida.
+		La postcondición ¬ DESPEJADO([X]) no es válida.
+		La postcondición ¬ SOBRELAMESA([X]) no es válida.
+		La postcondición ¬ BRAZOLIBRE() no es válida.
+	Analizando el operador APILAR([X], [Y]):
+		La postcondición  BRAZOLIBRE() no es válida.
+		La postcondición  SOBRE([X], [Y]) es válida.
+		La postcondición  DESPEJADO([X]) no es válida.
+		La postcondición ¬ DESPEJADO([Y]) no es válida.
+		La postcondición ¬ AGARRADO([X]) no es válida.
+	Analizando el operador BAJAR([X]):
+		La postcondición  DESPEJADO([X]) no es válida.
+		La postcondición  SOBRELAMESA([X]) no es válida.
+		La postcondición  BRAZOLIBRE() no es válida.
+		La postcondición ¬ AGARRADO([X]) no es válida.
+	Analizando el operador DESAPILAR([X], [Y]):
+		La postcondición  AGARRADO([X]) no es válida.
+		La postcondición  DESPEJADO([Y]) no es válida.
+		La postcondición ¬ SOBRE([X], [Y]) no es válida.
+		La postcondición ¬ DESPEJADO([X]) no es válida.
+		La postcondición ¬ BRAZOLIBRE() no es válida.
+Operadores posibles encontrados: APILAR(A, B)
+Se introduce el operador: APILAR(A, B) en la pila.
+Estado actual de la pila: 
+	APILAR(A, B)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila: APILAR(A, B) (Operador)
+Se intenta aplicar el operador APILAR(A, B).
+No se puede aplicar el operador. Se introducen sus precondiciones en la pila.
+Estado actual de la pila: 
+	[  DESPEJADO(B),  AGARRADO(A) ]
+	APILAR(A, B)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila: [  DESPEJADO(B),  AGARRADO(A) ] (Conjunción de Predicados)
+No se cumple la conjunción. Se agrega una posible combinación de sus elementos.
+Estado actual de la pila: 
+	 AGARRADO(A)
+	 DESPEJADO(B)
+	[  DESPEJADO(B),  AGARRADO(A) ]
+	APILAR(A, B)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila:  AGARRADO(A) (Predicado)
+El predicado  AGARRADO(A) ya está instanciado.
+Buscando algún operador que agregue el predicado anterior...
+	Analizando el operador AGARRAR([X]):
+		La postcondición  AGARRADO([X]) es válida.
+		La postcondición ¬ DESPEJADO([X]) no es válida.
+		La postcondición ¬ SOBRELAMESA([X]) no es válida.
+		La postcondición ¬ BRAZOLIBRE() no es válida.
+	Analizando el operador APILAR([X], [Y]):
+		La postcondición  BRAZOLIBRE() no es válida.
+		La postcondición  SOBRE([X], [Y]) no es válida.
+		La postcondición  DESPEJADO([X]) no es válida.
+		La postcondición ¬ DESPEJADO([Y]) no es válida.
+		La postcondición ¬ AGARRADO([X]) no es válida.
+	Analizando el operador BAJAR([X]):
+		La postcondición  DESPEJADO([X]) no es válida.
+		La postcondición  SOBRELAMESA([X]) no es válida.
+		La postcondición  BRAZOLIBRE() no es válida.
+		La postcondición ¬ AGARRADO([X]) no es válida.
+	Analizando el operador DESAPILAR([X], [Y]):
+		La postcondición  AGARRADO([X]) es válida.
+		La postcondición  DESPEJADO([Y]) no es válida.
+		La postcondición ¬ SOBRE([X], [Y]) no es válida.
+		La postcondición ¬ DESPEJADO([X]) no es válida.
+		La postcondición ¬ BRAZOLIBRE() no es válida.
+Operadores posibles encontrados: AGARRAR(A), DESAPILAR(A, B)
+Se introduce el operador: AGARRAR(A) en la pila.
+Se introduce el operador: DESAPILAR(A, B) en la pila.
+Estado actual de la pila: 
+	AGARRAR(A)
+	 AGARRADO(A)
+	 DESPEJADO(B)
+	[  DESPEJADO(B),  AGARRADO(A) ]
+	APILAR(A, B)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila: AGARRAR(A) (Operador)
+Se intenta aplicar el operador AGARRAR(A).
+Se puede aplicar el operador. Se aplican sus postcondiciones.
+Estado actual de la pila: 
+	 AGARRADO(A)
+	 DESPEJADO(B)
+	[  DESPEJADO(B),  AGARRADO(A) ]
+	APILAR(A, B)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila:  AGARRADO(A) (Predicado)
+El predicado  AGARRADO(A) ya está instanciado.
+Se cumple y se quita el predicado:  AGARRADO(A)
+Estado actual de la pila: 
+	 DESPEJADO(B)
+	[  DESPEJADO(B),  AGARRADO(A) ]
+	APILAR(A, B)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila:  DESPEJADO(B) (Predicado)
+El predicado  DESPEJADO(B) ya está instanciado.
+Se cumple y se quita el predicado:  DESPEJADO(B)
+Estado actual de la pila: 
+	[  DESPEJADO(B),  AGARRADO(A) ]
+	APILAR(A, B)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila: [  DESPEJADO(B),  AGARRADO(A) ] (Conjunción de Predicados)
+Se cumple y se quita la conjunción de predicados: 
+[  DESPEJADO(B),  AGARRADO(A) ]
+Estado actual de la pila: 
+	APILAR(A, B)
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila: APILAR(A, B) (Operador)
+Se intenta aplicar el operador APILAR(A, B).
+Se puede aplicar el operador. Se aplican sus postcondiciones.
+Estado actual de la pila: 
+	 SOBRE(A, B)
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila:  SOBRE(A, B) (Predicado)
+El predicado  SOBRE(A, B) ya está instanciado.
+Se cumple y se quita el predicado:  SOBRE(A, B)
+Estado actual de la pila: 
+	[  SOBRE(A, B),  SOBRE(B, C) ]
+Analizando la cima de la pila: [  SOBRE(A, B),  SOBRE(B, C) ] (Conjunción de Predicados)
+Se cumple y se quita la conjunción de predicados: 
+[  SOBRE(A, B),  SOBRE(B, C) ]
+
+El algoritmo ha acabado su ejecución.
+
+Plan para llegar al objetivo: [AGARRAR(B), APILAR(B, C), AGARRAR(A), APILAR(A, B)]
